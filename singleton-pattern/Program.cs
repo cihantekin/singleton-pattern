@@ -14,10 +14,17 @@ Thread process2 = new(() =>
     TestSingleton("Process2");
 });
 
+Thread process3 = new(() =>
+{
+    TestSingleton("Process3");
+});
+
 process1.Start();
 process2.Start();
+process3.Start();
 process1.Join();
 process2.Join();
+process3.Join();
 
 static void TestSingleton(string value)
 {

@@ -19,6 +19,7 @@
                 {
                     _instance ??= new Singleton
                         {
+                            // This is here for test purposes
                             Value = value
                         };
                 }
